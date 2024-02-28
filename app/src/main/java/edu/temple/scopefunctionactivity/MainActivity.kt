@@ -13,11 +13,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        getTestDataArray()
+        val list = listOf(
+            1.0,
+            2.0,
+            2.5,
+            3.0,
+            3.5,
+            4.0,
+            5.0
+        )
+        val list2 = listOf(
+            1,
+            2,
+            3,
+            4,
+            5
+        )
         // You can test your helper functions by  calling them from onCreate() and
         // printing their output to the Log, which is visible in the LogCat:
         // eg. Log.d("function output", getTestDataArray().toString())
-
+        Log.d("getTestDataArray output", getTestDataArray().toString())
+        Log.d("averageLessThanMedian output", averageLessThanMedian(list).toString())
+        Log.d("getView output", getView(0,null,list2,this@MainActivity).toString())
     }
 
 
